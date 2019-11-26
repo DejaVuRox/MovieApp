@@ -1,4 +1,4 @@
-import { MOVIE_SEARCH, FETCH_MOVIES, GET_MOVIE } from '../actions/actionTypes'
+import { MOVIE_SEARCH, FETCH_MOVIES, GET_MOVIE, LOADING } from '../actions/actionTypes'
 
 const initialState = {
     searchInput: '',
@@ -19,11 +19,18 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         movies: action.data,
+        loading: false
       };
     case GET_MOVIE:
       return {
         ...state,
         movie: action.data,
+        loading: false
+      };
+    case LOADING:
+      return {
+        ...state,
+        loading: true,
       };
     default:
       return state;

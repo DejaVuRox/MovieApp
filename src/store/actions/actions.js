@@ -1,4 +1,4 @@
-import { MOVIE_SEARCH, FETCH_MOVIES, GET_MOVIE } from './actionTypes'
+import { MOVIE_SEARCH, FETCH_MOVIES, GET_MOVIE, LOADING } from './actionTypes'
 import axios from 'axios'
 import { apiKey } from '../../components/API/API'
 
@@ -33,3 +33,9 @@ export const getMovie = id => {
       .catch(err => console.log(err));
   }
 }
+
+export const setLoading = () => {
+  return {
+    type: LOADING
+  }
+} 

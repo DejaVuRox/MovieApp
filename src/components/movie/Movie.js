@@ -12,7 +12,7 @@ export class Movie extends Component {
             <h5 className="card-title">
               {movie.Title} - {movie.Year}
             </h5>
-            <Link to={'/movie/' + movie.ImdbID} className="btn btn-primary">
+            <Link to={"/movie/" + movie.imdbID} className="btn btn-primary">
               Movie Details
             </Link>
           </div>

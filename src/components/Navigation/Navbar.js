@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import Search from '../search/SearchForm'
-import Spinner from '../spinner/Spinner'
 import MovieList from '../movie/MovieList'
+import { Link } from "react-router-dom";
+
 
 import { connect } from 'react-redux'
 
@@ -11,7 +12,7 @@ class Navbar extends Component {
   return (
     <div className="container">
       <nav className="navbar navbar-light bg-light">
-        <a className="navbar-brand">MovieApp</a>
+        <Link className="navbar-brand">MovieApp</Link>
         <Search />
       </nav>
       <div className='container' >
